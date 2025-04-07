@@ -1,54 +1,51 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>LifeSpot</title>
-        <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
-        
-        <script type="text/javascript" src="../Static/JS/index.js"></script>
-        <script>
-            // Проверка на возраст
-            // checkAge();
-            
-            // сохранение сессии
-            handleSession()
-            
-            // вывод данных сессии в консоль
-            sessionLog();
-
-            // функция для получения пользовательского ввода    
-            const inputParseFunction = function(){
-                return document.getElementsByTagName('input')[0].value.toLowerCase();
-            }
-        </script>
-        
-    </head>
-    
-    <!-- Хедер страницы находится над тегом body -->
-    <header id="header-index">
-        <h1>LifeSpot - прямые трансляции с улиц</h1>
-        <p>Покажем, что происходит прямо сейчас</p>
-        <input type="text" oninput="filterContent()" size=50%>
-    </header>
-    
-    <!--SIDEBAR-->
-    
-    <body>
-        <div class="bordered">
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h3>Нью-Йорк, Брайант Парк</h3>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h3>Санкт-Петербург, Невский Проспект</h3>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/muVgPUnU7qA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <h3>Лондон, автобусный маршрут</h3>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>LifeSpot</title>
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <script>
+        //checkAge();
+        handleSession(logger, checker);
+        //sessionLog();
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Telegramm @lifespot777!"),
+            30000);
+    </script>
+</head>
+<header id="header-index">
+    <h1>LifeSpot - прямые трансляции с улиц</h1>
+    <p>Покажем, что происходит прямо сейчас</p>
+    <p>
+        <b>Поиск</b>
+        <input type="text" oninput="filterContent(inputParseFunction())" size=50%>
+    </p>
+</header>
+<!--SIDEBAR-->
+<body>
+    <div>
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/h1wly909BYw?si=iyx0iuShP0wpM2M6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Санкт-Петербург, Невский проспект</h3>
         </div>
-    </body>
-    
-    <!--FOOTER-->
+
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/rnXIjl_Rzy4?si=i7PqyTn60slnUM29" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Нью-Йорк, Таймс Сквер</h3>
+        </div>
+
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/KSsfLxP-A9g?si=PJjGQwO8J-vzfE1T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Лондон, Автобусный маршрут</h3>
+        </div>
+
+
+    </div>
+</body>
+
+<!--FOOTER-->
 </html>
